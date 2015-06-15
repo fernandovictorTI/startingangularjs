@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h4>{{title}}</h4>
+	</div>
+	<div class="panel-body">
+		<form name="formInteressado">
+			<div class="row">
+				<div class="col-md-12">
+					<blockquote class="danger" ng-show="formInteressado.$invalid">Insira todos os campos com *.</blockquote>
+					<div class="form-group error">
+						<label>Nome*</label>
+						<input type="text" class="form-control" ng-model="interessado.nome" required />	
+					</div>
+					<div class="form-group error">
+						<label>CPF*</label>
+						<input type="text" class="form-control" ng-model="interessado.cpf" required />
+					</div>
+					<div class="form-group error">
+						<label>Contato*</label>
+						<input type="text" class="form-control" ng-model="interessado.contato" required />
+					</div>
+					<div class="form-group error">
+						<label>Endereço*</label>
+						<input type="text" class="form-control danger" ng-model="interessado.endereco" required />
+					</div>
+					<hr>
+					<input type="text" class="btn btn-primary" id="btnCadastrar" value="{{acao}}" ng-disabled="formInteressado.$invalid" ng-click="salvar()" />
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

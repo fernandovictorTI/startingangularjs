@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h4>{{title}}</h4>
+	</div>
+	<div class="panel-body">
+		{{teste}}
+		<table ng-table class="table table-bordered">
+			<thead>
+		        <tr>
+			        <th>Nome</th>
+			        <th>CPF</th>
+			        <th>Contato</th>
+			        <th>Endereço</th>
+			        <th>Ações</th>
+		        </tr>
+      		</thead>
+      		<tbody>
+      			<tr ng-repeat="user in users">
+		        	<td>{{user.nome}}</td>
+		        	<td>{{user.cpf}}</td>
+		        	<td>{{user.contato}}</td>
+		        	<td>{{user.endereco}}</td>
+		        	<td>
+		        		<button type="button" class="btn btn-default" ng-click="editar(user.id)">
+						  <i class="glyphicon glyphicon-pencil"></i> Editar
+						</button>
+						<button type="button" class="btn btn-danger" ng-click="excluir(user.id)">
+						  <i class="glyphicon glyphicon-remove"></i> Excluir
+						</button>
+		        	</td>
+	    		</tr>
+      		</tbody>
+    	</table>
+	</div>
+</div>
